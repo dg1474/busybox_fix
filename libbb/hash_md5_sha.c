@@ -1313,7 +1313,7 @@ unsigned FAST_FUNC sha1_end(sha1_ctx_t *ctx, void *resbuf)
 	hash_size = 8;
 	if (ctx->process_block == sha1_process_block64
 #if ENABLE_SHA1_HWACCEL
-	 || ctx->process_block == sha1_process_block64_shaNI
+	 || ctx->process_block == sha1_process_block64
 #endif
 	) {
 		hash_size = 5;
